@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .signup-container h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2b6cb0;
+    }
+
+    .signup-form label {
+      display: block;
+      margin: 0.5rem 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .signup-form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    #signup-button {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #signup-button:hover {
+      background-color: #265a96;
+    }
+  </style>
+  <body>
+    <div class="signup-container">
+      <h1>Sign Up</h1>
+      <form class="signup-form">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Confirm your password"
+          required
+        />
+
+        <button type="submit" id="signup-button">Sign Up</button>
+      </form>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.querySelector(".signup-form");
+
+        signupForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirm-password").value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+          }
+
+          alert(`Account created for ${email}!`);
+          signupForm.reset();
+        });
+      });
+    </script>
+  </body>
+</html>

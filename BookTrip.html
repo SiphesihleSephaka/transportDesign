@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking a Trip</title>
+    <link rel="stylesheet" href="styles/booking.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2b6cb0;
+      margin-bottom: 1.5rem;
+    }
+
+    form label {
+      display: block;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #265a96;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Booking a Trip</h1>
+      <form id="booking-form">
+        <label for="pickup">Pickup Location:</label>
+        <input
+          type="text"
+          id="pickup"
+          placeholder="Enter pickup location"
+          required
+        />
+
+        <label for="dropoff">Dropoff Location:</label>
+        <input
+          type="text"
+          id="dropoff"
+          placeholder="Enter dropoff location"
+          required
+        />
+
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" required />
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("booking-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const pickup = document.getElementById("pickup").value;
+          const dropoff = document.getElementById("dropoff").value;
+          const time = document.getElementById("time").value;
+
+          alert(`Booking confirmed from ${pickup} to ${dropoff} at ${time}.`);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Today</title>
+    <link rel="stylesheet" href="styles/moving.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #2b6cb0;
+    }
+
+    .ride {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ride button {
+      background-color: #2b6cb0;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .ride button:hover {
+      background-color: #265a96;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Moving Today</h1>
+      <div class="available-rides">
+        <div class="ride">
+          <span>Ride 1 - 10:30 AM</span>
+          <button>Book</button>
+        </div>
+        <div class="ride">
+          <span>Ride 2 - 11:00 AM</span>
+          <button>Book</button>
+        </div>
+        <div class="ride">
+          <span>Ride 3 - 1:30 PM</span>
+          <button>Book</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".ride button").forEach((button) => {
+        button.addEventListener("click", () => {
+          alert("Ride booked successfully!");
+        });
+      });
+    </script>
+  </body>
+</html>

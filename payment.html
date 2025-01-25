@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Preview</title>
+    <link rel="stylesheet" href="styles/payment-preview.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2b6cb0;
+      margin-bottom: 1.5rem;
+    }
+
+    .payment-details {
+      padding: 1rem;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #265a96;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Payment Preview</h1>
+      <div class="payment-details">
+        <p><strong>Ride:</strong> Ride 1</p>
+        <p><strong>Pickup:</strong> Main Street</p>
+        <p><strong>Dropoff:</strong> Central Park</p>
+        <p><strong>Price:</strong> $23.00</p>
+      </div>
+      <button id="confirm-payment">Confirm Payment</button>
+    </div>
+    <script>
+      document
+        .getElementById("confirm-payment")
+        .addEventListener("click", () => {
+          alert("Payment confirmed successfully!");
+        });
+    </script>
+  </body>
+</html>

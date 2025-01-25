@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leave a Review</title>
+    <link rel="stylesheet" href="styles/review.css" />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2b6cb0;
+      margin-bottom: 1rem;
+    }
+
+    form label {
+      display: block;
+      margin: 0.5rem 0;
+      font-weight: bold;
+    }
+
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #265a96;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Leave a Review</h1>
+      <form id="review-form">
+        <label for="rating">Rate the Ride:</label>
+        <select id="rating" required>
+          <option value="">Select Rating</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Good</option>
+          <option value="3">3 - Average</option>
+          <option value="2">2 - Poor</option>
+          <option value="1">1 - Terrible</option>
+        </select>
+
+        <label for="feedback">Feedback:</label>
+        <textarea
+          id="feedback"
+          placeholder="Leave your feedback here..."
+          rows="4"
+        ></textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+    <script>
+      document.getElementById("review-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const rating = document.getElementById("rating").value;
+        const feedback = document.getElementById("feedback").value;
+
+        alert(
+          `Thank you for your review!\nRating: ${rating}\nFeedback: ${feedback}`
+        );
+      });
+    </script>
+  </body>
+</html>
