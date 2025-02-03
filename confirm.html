@@ -4,61 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmation</title>
-    <link rel="stylesheet" href="styles/confirmation.css" />
+    <link rel="stylesheet" href="css/confirm.css" />
   </head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
 
-    .container {
-      text-align: center;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #2b6cb0;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-    }
-
-    button {
-      background-color: #2b6cb0;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #265a96;
-    }
-  </style>
   <body>
     <div class="container">
       <h1>Congratulations!</h1>
       <p>Your ride has been successfully booked.</p>
-      <button id="go-home">Go to Home</button>
+
+      <a href="finalTicket.html">
+        <button>View Ticket</button>
+      </a>
     </div>
-    <script>
-      document.getElementById("go-home").addEventListener("click", () => {
-        window.location.href = "signup.html"; // Redirect to home page
-      });
-    </script>
+    <script src="javascript/confirm.js"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Fixes disappearing text */
+  height: auto; /* Allows natural growth */
+  padding-top: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: #2b6cb0;
+  margin-bottom: 1.5rem;
+}
+
+.rides-list .ride {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.ride button {
+  background-color: #2b6cb0;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ride button:hover {
+  background-color: #265a96;
+}
